@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Weinter</title>
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 25px 60px;
+  font-size: 28px;
+  background: #111;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#pay {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+input {
+  padding: 12px;
+  font-size: 18px;
+  margin-top: 10px;
+  width: 200px;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+  <button onclick="openPay()">BUCKS</button>
+</div>
+
+<div id="pay">
+  <h2>Оплата услуг Weinter</h2>
+
+  <p>Выберите сумму:</p>
+  <p>100 — 100 ₽</p>
+  <p>300 — 300 ₽</p>
+  <p>500 — 500 ₽</p>
+
+  <p>Своя сумма:</p>
+  <input type="number" placeholder="₽">
+
+  <p style="margin-top:20px;">
+    Переведите сумму на карту Сбербанк:<br>
+    <b>2202 2023 0000 0000</b>
+  </p>
+
+  <p>После оплаты свяжитесь в Telegram</p>
+</div>
+
+<script>
+function openPay() {
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('pay').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>
